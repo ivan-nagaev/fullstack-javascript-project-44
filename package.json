@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "first project",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "main": "index.js",
   "type": "module",
@@ -23,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/ivan-nagaev/fullstack-javascript-project-44/issues"
   },
-  "homepage": "https://github.com/ivan-nagaev/fullstack-javascript-project-44#readme"
+  "homepage": "https://github.com/ivan-nagaev/fullstack-javascript-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
 }
