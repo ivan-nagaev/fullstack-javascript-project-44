@@ -9,7 +9,7 @@ export default () => {
   const victory = `Congratulations, ${userName}!`;
 
   for (let i = 0; i < 3; i += 1) {
-    const secretNumber = randomNum();
+    const secretNumber = randomNum(100);
 
     console.log(`Question: ${secretNumber}`);
 

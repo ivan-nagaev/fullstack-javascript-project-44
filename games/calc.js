@@ -12,8 +12,8 @@ export default () => {
   // console.log('What is the result of the expression?');
 
   while (count < 3 && check) {
-    const num1 = randomNum();
-    const num2 = randomNum();
+    const num1 = randomNum(10);
+    const num2 = randomNum(15);
     const operations = mathOperations();
 
     let result = 0;

@@ -8,8 +8,8 @@ export default () => {
   let game = true;
 
   while (count < 3 && game) {
-    const num1 = randomNum();
-    const num2 = randomNum();
+    const num1 = randomNum(20);
+    const num2 = randomNum(30);
     const divisor = gcd(num1, num2);
 
     // calc divisor

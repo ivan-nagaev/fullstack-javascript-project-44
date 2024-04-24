@@ -22,7 +22,7 @@ const greetings = (brainGames) => {
 };
 
 // get random number
-const randomNum = () => Math.floor(Math.random() * 20) + 1;
+const randomNum = (num) => Math.floor(Math.random() * num) + 1;
 
 // get math operations '+', '-', '*'
 const mathOperations = () => {
