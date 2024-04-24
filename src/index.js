@@ -13,13 +13,16 @@ const greetings = (brainGames) => {
     case 'even':
       console.log('Answer "yes" if the number is even, otherwise answer "no".');
       break;
+    case 'gcd':
+      console.log('Find the greatest common divisor of given numbers.');
+      break;
   }
 
   return userName;
 };
 
 // get random number
-const randomNum = () => Math.floor(Math.random() * 10) + 1;
+const randomNum = () => Math.floor(Math.random() * 20) + 1;
 
 // get math operations '+', '-', '*'
 const mathOperations = () => {
@@ -29,4 +32,10 @@ const mathOperations = () => {
   return mathOperations[checkEl];
 };
 
-export { greetings, randomNum, mathOperations };
+// get gcd from numbers
+const gcd = (num1, num2) => {
+  if (num2 === 0) return num1;
+  return gcd(num2, num1 % num2);
+};
+
+export { greetings, randomNum, mathOperations, gcd };
