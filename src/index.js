@@ -16,12 +16,15 @@ const greetings = (brainGames) => {
     case 'gcd':
       console.log('Find the greatest common divisor of given numbers.');
       break;
+    case 'progression':
+      console.log('What number is missing in the progression?');
+      break;
   }
 
   return userName;
 };
 
-// get random number
+// get random number, ${num} -> number up to
 const randomNum = (num) => Math.floor(Math.random() * num) + 1;
 
 // get math operations '+', '-', '*'
