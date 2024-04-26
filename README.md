@@ -1,5 +1,8 @@
 ### Hexlet tests and linter status:
 
+MMy first project on Hexlet is "Mind Games".
+The following is a presentation of the health of completed tasks.
+
 [![Actions Status](https://github.com/ivan-nagaev/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ivan-nagaev/fullstack-javascript-project-44/actions)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/a49d9465974642e123a4/maintainability)](https://codeclimate.com/github/ivan-nagaev/fullstack-javascript-project-44/maintainability)
