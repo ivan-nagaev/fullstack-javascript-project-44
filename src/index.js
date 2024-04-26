@@ -19,6 +19,11 @@ const greetings = (brainGames) => {
     case 'progression':
       console.log('What number is missing in the progression?');
       break;
+    case 'prime':
+      console.log(
+        'Answer "yes" if given number is prime. Otherwise answer "no".'
+      );
+      break;
   }
 
   return userName;
@@ -41,4 +46,12 @@ const gcd = (num1, num2) => {
   return gcd(num2, num1 % num2);
 };
 
-export { greetings, randomNum, mathOperations, gcd };
+const prime = (num) => {
+  if (num < 2) return 'no';
+
+  for (const i = 2; i < num; i += 1) {
+    return num % i === 0 ? 'no' : 'yes';
+  }
+};
+
+export { greetings, randomNum, mathOperations, gcd, prime };
