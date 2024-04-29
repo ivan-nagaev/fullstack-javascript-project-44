@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { greetings, randomNum, prime } from '../src/index.js';
+import { greetings, randomNum, isPrime } from '../src/index.js';
 
 const userName = greetings('prime');
 
@@ -9,11 +9,18 @@ export default () => {
 
   while (count < 3 && game) {
     const randomNumber = randomNum(20);
+    const primeNum = isPrime(randomNumber);
 
     console.log(`Question: ${randomNumber}`);
-    const userAnswer = readLineSync.question(`Your answer: `);
+    let userAnswer = readLineSync.question('Your answer: ');
 
-    if (prime(randomNumber) === userAnswer) {
+    if (userAnswer === 'yes') {
+      userAnswer = true;
+    } else {
+      userAnswer = false;
+    }
+
+    if (primeNum === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(

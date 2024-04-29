@@ -25,7 +25,7 @@ export default () => {
           userAnswer === 'yes' ? 'no' : 'yes'
         }'.`
       );
-      return console.log(`Let's try again, ${userName}`);
+      return console.log(`Let's try again, ${userName}!`);
     }
   }
   return console.log(victory);

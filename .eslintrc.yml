@@ -6,4 +6,9 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules:
-  { 'no-console': 'off', 'import/extensions': ['error', { 'js': 'always' }] }
+  {
+    'no-console': 'off',
+    'import/extensions': ['error', { 'js': 'always' }],
+    'comma-dangle': ['error', 'never'],
+    'object-curly-newline': ['error', 'never'],
+  }

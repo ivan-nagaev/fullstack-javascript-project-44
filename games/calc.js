@@ -30,6 +30,8 @@ export default () => {
       case '*':
         result = num1 * num2;
         break;
+      default:
+        result = 0;
     }
 
     const userAnswer = Number(readLineSync.question('Your answer: '));

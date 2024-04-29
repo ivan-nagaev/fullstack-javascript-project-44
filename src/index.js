@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-// greetings user and get name
+// greetings user and get name for all brain-games
 const greetings = (brainGames) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
@@ -24,6 +24,8 @@ const greetings = (brainGames) => {
         'Answer "yes" if given number is prime. Otherwise answer "no".'
       );
       break;
+    default:
+      console.log('Welcome to the brain-games!');
   }
 
   return userName;
@@ -32,26 +34,27 @@ const greetings = (brainGames) => {
 // get random number, ${num} -> number up to
 const randomNum = (num) => Math.floor(Math.random() * num) + 1;
 
-// get math operations '+', '-', '*'
+// get math operations '+', '-', '*' for calc game
 const mathOperations = () => {
-  const mathOperations = ['+', '-', '*'];
-  const checkEl = Math.floor(Math.random() * mathOperations.length);
+  const operations = ['+', '-', '*'];
+  const checkEl = Math.floor(Math.random() * operations.length);
 
-  return mathOperations[checkEl];
+  return operations[checkEl];
 };
 
-// get gcd from numbers
+// get gcd from numbers for gcd game
 const gcd = (num1, num2) => {
   if (num2 === 0) return num1;
   return gcd(num2, num1 % num2);
 };
 
-const prime = (num) => {
-  if (num < 2) return 'no';
-
-  for (const i = 2; i < num; i += 1) {
-    return num % i === 0 ? 'no' : 'yes';
+// get prime number for prime game
+const isPrime = (num) => {
+  for (let i = 2, s = Math.sqrt(num); i <= s; i += 1) {
+    if (num % i === 0) return false;
   }
+
+  return num > 1;
 };
 
-export { greetings, randomNum, mathOperations, gcd, prime };
+export { greetings, randomNum, mathOperations, gcd, isPrime };
