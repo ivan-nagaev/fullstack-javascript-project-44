@@ -65,4 +65,11 @@ const failGame = (userName, result) => {
   return false;
 };
 
-export { greetings, randomNum, mathOperations, gcd, isPrime, failGame };
+export {
+  greetings,
+  randomNum,
+  mathOperations,
+  gcd,
+  isPrime,
+  failGame,
+};
