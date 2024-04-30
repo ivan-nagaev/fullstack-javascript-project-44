@@ -1,5 +1,10 @@
 import readLineSync from 'readline-sync';
-import { greetings, randomNum, gcd, failGame } from '../src/index.js';
+import {
+  greetings,
+  randomNum,
+  gcd,
+  failGame,
+} from '../src/index.js';
 
 const userName = greetings('gcd');
 

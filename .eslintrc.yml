@@ -6,28 +6,4 @@ parserOptions:
   ecmaVersion: latest
   sourceType: module
 rules:
-  {
-    'no-console': 'off',
-    'import/extensions': ['error', { 'js': 'always' }],
-    'comma-dangle':
-      [
-        'error',
-        {
-          'arrays': 'never',
-          'objects': 'never',
-          'imports': 'never',
-          'exports': 'never',
-          'functions': 'never',
-        },
-      ],
-    'object-curly-newline':
-      [
-        'error',
-        {
-          'ObjectExpression': 'always',
-          'ObjectPattern': { 'multiline': true },
-          'ImportDeclaration': { 'multiline': true, 'minProperties': 5 },
-          'ExportDeclaration': { 'multiline': true, 'minProperties': 7 },
-        },
-      ],
-  }
+  { "no-console": "off", "import/extensions": ["error", { "js": "always" }] }

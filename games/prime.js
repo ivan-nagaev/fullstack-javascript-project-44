@@ -26,7 +26,7 @@ export default () => {
       console.log(
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${
           userAnswer === 'no' ? 'yes' : 'no'
-        }'.`
+        }'.`,
       );
       game = false;
       return console.log(`Let's try again, ${userName}!`);

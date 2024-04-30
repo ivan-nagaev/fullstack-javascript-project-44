@@ -1,7 +1,13 @@
 // brain-calc games
 
 import readLineSync from 'readline-sync';
-import { greetings, randomNum, mathOperations, failGame } from '../src/index.js';
+import {
+  greetings,
+  randomNum,
+  mathOperations,
+  failGame,
+}
+  from '../src/index.js';
 
 const userName = greetings('calc');
 
