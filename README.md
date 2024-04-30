@@ -1,7 +1,12 @@
 ### Hexlet tests and linter status:
 
-MMy first project on Hexlet is "Mind Games".
+My first project on Hexlet is "Mind Games".
 The following is a presentation of the health of completed tasks.
+
+Minimum requirements:
+	- node.js (the latest version);
+	- clone the created project repository locally,
+	- to install a package globally from a local directory, use the npm link command.
 
 [![Actions Status](https://github.com/ivan-nagaev/fullstack-javascript-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/ivan-nagaev/fullstack-javascript-project-44/actions)
 
