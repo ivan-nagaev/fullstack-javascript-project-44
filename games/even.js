@@ -20,11 +20,7 @@ export default () => {
     } else if (userAnswer === 'no' && secretNumber % 2 !== 0) {
       console.log('Correct!');
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${
-          userAnswer === 'yes' ? 'no' : 'yes'
-        }'.`
-      );
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${userAnswer === 'yes' ? 'no' : 'yes'}'.`);
       return console.log(`Let's try again, ${userName}!`);
     }
   }

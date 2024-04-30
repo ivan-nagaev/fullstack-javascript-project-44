@@ -1,5 +1,5 @@
 import readLineSync from 'readline-sync';
-import { greetings, randomNum } from '../src/index.js';
+import { greetings, randomNum, failGame } from '../src/index.js';
 
 const userName = greetings('progression');
 
@@ -19,12 +19,12 @@ export default () => {
     // steps on array and check secret number
     const step = randomNum(4);
     const secretNumber = randomNum(numbersLegth - 1);
-    let missingValue = 0;
+    let result = 0;
 
     for (let i = 0; i < numbersLegth; i += 1) {
       numbers.push(numbers[i] + step);
       if (i === secretNumber) {
-        missingValue = numbers[i];
+        result = numbers[i];
         numbers[i] = '..';
       }
     }
@@ -32,14 +32,11 @@ export default () => {
     console.log(`Question: ${numbers.toString().replaceAll(',', ' ')}`);
     const userAnswer = Number(readLineSync.question('Your answer: '));
 
-    if (userAnswer === missingValue) {
+    if (userAnswer === result) {
       console.log('Correct');
     } else {
-      console.log(
-        `'${userAnswer}' is wrong answer ;(. Correct answer was '${missingValue}'.`
-      );
-      game = false;
-      return console.log(`Let's try again, ${userName}!`);
+      game = failGame(userName, result);
+      return game;
     }
 
     count += 1;

@@ -9,7 +9,7 @@ export default () => {
 
   while (count < 3 && game) {
     const randomNumber = randomNum(20);
-    const primeNum = isPrime(randomNumber);
+    const result = isPrime(randomNumber);
 
     console.log(`Question: ${randomNumber}`);
     let userAnswer = readLineSync.question('Your answer: ');
@@ -20,7 +20,7 @@ export default () => {
       userAnswer = false;
     }
 
-    if (primeNum === userAnswer) {
+    if (result === userAnswer) {
       console.log('Correct!');
     } else {
       console.log(

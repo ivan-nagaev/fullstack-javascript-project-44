@@ -20,9 +20,7 @@ const greetings = (brainGames) => {
       console.log('What number is missing in the progression?');
       break;
     case 'prime':
-      console.log(
-        'Answer "yes" if given number is prime. Otherwise answer "no".'
-      );
+      console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
       break;
     default:
       console.log('Welcome to the brain-games!');
@@ -57,4 +55,14 @@ const isPrime = (num) => {
   return num > 1;
 };
 
-export { greetings, randomNum, mathOperations, gcd, isPrime };
+// fail message
+const failGame = (userName, result) => {
+  const fail = `'${userName}' is wrong answer ;(. Correct answer was '${result}'.`;
+
+  console.log(fail);
+  console.log(`Let's try again, ${userName}!`);
+
+  return false;
+};
+
+export { greetings, randomNum, mathOperations, gcd, isPrime, failGame };
